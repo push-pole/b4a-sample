@@ -1,21 +1,19 @@
 ﻿Build1=Default,com.pushpole.sampleb4a
 Group=Default Group
-IconFile=
 Library1=core
-Library2=pushe
+Library2=pushpole
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="27"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:theme, "@android:style/Theme.Holo")~\n~'End of default text.~\n~~\n~CreateResourceFromFile(Macro, PushPole.Standalone)~\n~AddApplicationText(<meta-data android:name="com.pushpole.sdk.token" android:value="PUSHPOLE_76583046756"/>)~\n~AddPermission(android.permission.ACCESS_COARSE_LOCATION)
 Module1=Starter
-Module2=PushPoleJsonService
 NumberOfFiles=0
 NumberOfLibraries=2
-NumberOfModules=2
-Version=8.5
+NumberOfModules=1
+Version=9.8
 @EndOfDesignText@
 'dont forget that b4a app your package name must be same as package name that created in pushe panel 
 #Region Project Attributes 
 	#ApplicationLabel: PushPoleSampleB4A
-	#VersionCode: 1006003
-	#VersionName: 1.6.3
+	#VersionCode: 1007001
+	#VersionName: 1.7.1
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False
@@ -47,7 +45,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	'call initialize to start pushe
 	p.initialize()
 	p.getId()
-	Log("pusheId is :" & p.getId())
+	Log("pushpoleId is :" & p.getId())
 End Sub
 
 Sub Activity_Resume
